@@ -88,7 +88,7 @@ public class LivingEntity : MonoBehaviour, IDamageable
         Destroy(ps, 2);
         if (boss)
         {
-            playerScript.WinStage();
+            
         }
     }
 

@@ -248,7 +248,7 @@ public class PlayerScript : LivingEntity, ITakeDamage
     public void WinStage()
     {
         winPanel.SetActive(true);
-        StartCoroutine("WinScreenTimer");
+        //StartCoroutine("WinScreenTimer");
     }
 
     void Jump()
