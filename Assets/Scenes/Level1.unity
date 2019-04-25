@@ -9118,12 +9118,12 @@ PrefabInstance:
     - target: {fileID: 5912662411107252730, guid: d43b0308cea735946b8d85838ec671da,
         type: 3}
       propertyPath: engageCombatDistance
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5912662411107252730, guid: d43b0308cea735946b8d85838ec671da,
         type: 3}
       propertyPath: moveDistance
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5912662411107252730, guid: d43b0308cea735946b8d85838ec671da,
         type: 3}
@@ -9155,6 +9155,16 @@ PrefabInstance:
         type: 3}
       propertyPath: rotate
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912662411107252730, guid: d43b0308cea735946b8d85838ec671da,
+        type: 3}
+      propertyPath: damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912662411107252730, guid: d43b0308cea735946b8d85838ec671da,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1891883217533418101, guid: d43b0308cea735946b8d85838ec671da,
         type: 3}
@@ -9868,16 +9878,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2758222333009881301, guid: cc2d1b3a7ed020147a3316c9b3b80ba2,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -2022866057
-      objectReference: {fileID: 0}
-    - target: {fileID: 2758222333009881301, guid: cc2d1b3a7ed020147a3316c9b3b80ba2,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2758222333009881290, guid: cc2d1b3a7ed020147a3316c9b3b80ba2,
         type: 3}
       propertyPath: isEnabled
@@ -9922,6 +9922,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 2.4092102
+      objectReference: {fileID: 0}
+    - target: {fileID: 2758222333009881301, guid: cc2d1b3a7ed020147a3316c9b3b80ba2,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2022866057
+      objectReference: {fileID: 0}
+    - target: {fileID: 2758222333009881301, guid: cc2d1b3a7ed020147a3316c9b3b80ba2,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc2d1b3a7ed020147a3316c9b3b80ba2, type: 3}
@@ -26070,88 +26080,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5458386154897283815, guid: cc0e812b095c64f44b33d73eb79b5b84,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8014021407637831304, guid: cc0e812b095c64f44b33d73eb79b5b84,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1307783004322690593, guid: cc0e812b095c64f44b33d73eb79b5b84,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534065564708672362, guid: cc0e812b095c64f44b33d73eb79b5b84,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1994782159842178609, guid: cc0e812b095c64f44b33d73eb79b5b84,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141967334817359233, guid: cc0e812b095c64f44b33d73eb79b5b84,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1823560219728214838, guid: cc0e812b095c64f44b33d73eb79b5b84,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8684559923397159106, guid: cc0e812b095c64f44b33d73eb79b5b84,
-        type: 3}
-      propertyPath: healthPowerup
-      value: 
-      objectReference: {fileID: 8963022426645104939, guid: a526eea26d3bfef459491c7717ea6dfd,
-        type: 3}
-    - target: {fileID: 8684559923397159106, guid: cc0e812b095c64f44b33d73eb79b5b84,
-        type: 3}
-      propertyPath: ammoCrate
-      value: 
-      objectReference: {fileID: 5976359134617325240, guid: fd8e6d5d33c13484ba5ab0ace9a60270,
-        type: 3}
-    - target: {fileID: 8684559923397159106, guid: cc0e812b095c64f44b33d73eb79b5b84,
-        type: 3}
-      propertyPath: itemDropChance
-      value: 99
-      objectReference: {fileID: 0}
-    - target: {fileID: 8684559923397159106, guid: cc0e812b095c64f44b33d73eb79b5b84,
-        type: 3}
-      propertyPath: invincibilityDamageEffect
-      value: 
-      objectReference: {fileID: 1000011128802252, guid: 23b0172889bd7b842920cfa1b9535973,
-        type: 3}
-    - target: {fileID: 8684559923397159106, guid: cc0e812b095c64f44b33d73eb79b5b84,
-        type: 3}
-      propertyPath: extraDamageEffect
-      value: 
-      objectReference: {fileID: 1000011128802252, guid: 8edd200c9cf6ceb4185664b757d1022a,
-        type: 3}
-    - target: {fileID: 8684559923397159106, guid: cc0e812b095c64f44b33d73eb79b5b84,
-        type: 3}
-      propertyPath: effectText
-      value: 
-      objectReference: {fileID: 1139057326}
-    - target: {fileID: 8684559923397159106, guid: cc0e812b095c64f44b33d73eb79b5b84,
-        type: 3}
-      propertyPath: winPanel
-      value: 
-      objectReference: {fileID: 1028397555}
-    - target: {fileID: 1823560219088359710, guid: cc0e812b095c64f44b33d73eb79b5b84,
-        type: 3}
-      propertyPath: orthographic size
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1823560219088359704, guid: cc0e812b095c64f44b33d73eb79b5b84,
-        type: 3}
-      propertyPath: offset.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1823560220720257347, guid: cc0e812b095c64f44b33d73eb79b5b84,
@@ -26203,6 +26134,55 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684559923397159106, guid: cc0e812b095c64f44b33d73eb79b5b84,
+        type: 3}
+      propertyPath: healthPowerup
+      value: 
+      objectReference: {fileID: 8963022426645104939, guid: a526eea26d3bfef459491c7717ea6dfd,
+        type: 3}
+    - target: {fileID: 8684559923397159106, guid: cc0e812b095c64f44b33d73eb79b5b84,
+        type: 3}
+      propertyPath: ammoCrate
+      value: 
+      objectReference: {fileID: 5976359134617325240, guid: fd8e6d5d33c13484ba5ab0ace9a60270,
+        type: 3}
+    - target: {fileID: 8684559923397159106, guid: cc0e812b095c64f44b33d73eb79b5b84,
+        type: 3}
+      propertyPath: itemDropChance
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684559923397159106, guid: cc0e812b095c64f44b33d73eb79b5b84,
+        type: 3}
+      propertyPath: invincibilityDamageEffect
+      value: 
+      objectReference: {fileID: 1000011128802252, guid: 23b0172889bd7b842920cfa1b9535973,
+        type: 3}
+    - target: {fileID: 8684559923397159106, guid: cc0e812b095c64f44b33d73eb79b5b84,
+        type: 3}
+      propertyPath: extraDamageEffect
+      value: 
+      objectReference: {fileID: 1000011128802252, guid: 8edd200c9cf6ceb4185664b757d1022a,
+        type: 3}
+    - target: {fileID: 8684559923397159106, guid: cc0e812b095c64f44b33d73eb79b5b84,
+        type: 3}
+      propertyPath: effectText
+      value: 
+      objectReference: {fileID: 1139057326}
+    - target: {fileID: 8684559923397159106, guid: cc0e812b095c64f44b33d73eb79b5b84,
+        type: 3}
+      propertyPath: winPanel
+      value: 
+      objectReference: {fileID: 1028397555}
+    - target: {fileID: 1823560219088359710, guid: cc0e812b095c64f44b33d73eb79b5b84,
+        type: 3}
+      propertyPath: orthographic size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823560219088359704, guid: cc0e812b095c64f44b33d73eb79b5b84,
+        type: 3}
+      propertyPath: offset.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1823560219771664864, guid: cc0e812b095c64f44b33d73eb79b5b84,
         type: 3}
@@ -26468,6 +26448,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.352
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534065564708672362, guid: cc0e812b095c64f44b33d73eb79b5b84,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1994782159842178609, guid: cc0e812b095c64f44b33d73eb79b5b84,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4141967334817359233, guid: cc0e812b095c64f44b33d73eb79b5b84,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014021407637831304, guid: cc0e812b095c64f44b33d73eb79b5b84,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307783004322690593, guid: cc0e812b095c64f44b33d73eb79b5b84,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458386154897283815, guid: cc0e812b095c64f44b33d73eb79b5b84,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8684559923206985873, guid: cc0e812b095c64f44b33d73eb79b5b84,
         type: 3}

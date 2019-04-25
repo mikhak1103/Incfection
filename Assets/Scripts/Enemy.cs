@@ -11,7 +11,7 @@ public class Enemy : LivingEntity
     Transform target;
     public float damage = 10;
 
-    public float engageCombatDistance = 0.4f;
+    public float engageCombatDistance;
     Vector3 startPosition;
     public float moveDistance = 10;
     public bool leftToRight;
@@ -23,7 +23,7 @@ public class Enemy : LivingEntity
 
     public Transform groundDetection;
 
-    float nextAttackTime;
+    public float nextAttackTime;
     float myCollisionRadius;
     float targetCollisionRadius;
 
@@ -38,8 +38,8 @@ public class Enemy : LivingEntity
     [Range(1, 10f)]
     public float size = 3f;
 
-    public float nextShotTime = 1;
-    public float timeBetweenShots = 0.1f;
+    public float nextShotTime;
+    public float timeBetweenShots;
 
     [Header("Motions")]
     public bool rotate;
@@ -60,41 +60,46 @@ public class Enemy : LivingEntity
         _centre = transform.position;
         rotateSpeed = 2f;
         radius = 4f;
-    }
+        nextShotTime = 1;
+        timeBetweenShots = 0.8f;
+        engageCombatDistance = 17f;
+}
 
     private void Update()
     {
-        if(Vector2.Distance(transform.position, target.position) < engageCombatDistance)
-        {
-            currentState = State.Attacking;
-        }
+            if (Vector2.Distance(transform.position, target.position) < engageCombatDistance)
+            {
+                currentState = State.Attacking;
+            }
 
-        if(currentState == State.Idle)
-        {
-            Idle();
-        }
-        if(currentState == State.Patroling)
-        {
-            Patrol();
-        }
-        if(currentState == State.Attacking)
-        {
-            Attack();
-        }
-        if(currentState == State.Chasing)
-        {
-            Chase();
-        }
+            if (Vector2.Distance(transform.position, target.position) > engageCombatDistance)
+            {
+                currentState = State.Idle;
+            }
 
-        if(rotate)
-        {
-            Rotate();
-        }
+            if (currentState == State.Patroling)
+            {
+                Patrol();
+            }
+            if (currentState == State.Attacking)
+            {
+                Attack();
+            }
+            if (currentState == State.Chasing)
+            {
+                Chase();
+            }
+
+            if (rotate)
+            {
+                Rotate();
+            }
+        
     }
 
     public void Idle()
     {
-        Debug.Log("Idling");
+
     }
 
     public void Patrol()

@@ -8,6 +8,7 @@ public class Menu : MonoBehaviour
 {
     public GameObject mainMenuHolder;
     public GameObject optionsMenuHolder;
+    public GameObject controlsMenuHolder;
     public Slider[] volumeSliders;
     public Toggle[] resolutionToggles;
     public int[] screenWidths;
@@ -59,12 +60,20 @@ public class Menu : MonoBehaviour
     public void OptionsMenu()
     {
         mainMenuHolder.SetActive(false);
+        controlsMenuHolder.SetActive(false);
         optionsMenuHolder.SetActive(true);
+    }
+
+    public void ControlsMenu()
+    {
+        mainMenuHolder.SetActive(false);
+        controlsMenuHolder.SetActive(true);
     }
 
     public void MainMenu()
     {
         optionsMenuHolder.SetActive(false);
+        controlsMenuHolder.SetActive(false);
         mainMenuHolder.SetActive(true);
     }
 
