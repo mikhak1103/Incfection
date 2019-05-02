@@ -6,8 +6,9 @@ public class Powerup : MonoBehaviour
     public Powerups powerup;
 
     public float healthAmount;
-    public float damageAmountMultiplier;
     public float shrinkTime;
+    public float damageTime;
+    public float invincibilityTime;
     public bool pickedUp;
     Rigidbody2D rb;
 

@@ -12,6 +12,9 @@ public class Teleport : MonoBehaviour
     public bool eligibleToTeleport;
     bool insideTrigger;
     public bool startActivated;
+    public bool destroySelf;
+    public float destroySelfAfterTime;
+    public bool destroyAfterTutorial;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +33,8 @@ public class Teleport : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && insideTrigger)
         {
-            eligibleToTeleport = true;              
+            eligibleToTeleport = true;
+
         }
 
         else if (Input.GetKeyUp(KeyCode.E))
@@ -53,7 +57,13 @@ public class Teleport : MonoBehaviour
                         if (teleportTo.ToString() == portal.name && eligibleToTeleport)
                         {
                             eligibleToTeleport = false;
-                            col.transform.position = portal.transform.position;                           
+                            col.transform.position = portal.transform.position;
+                            AudioManager.instance.PlaySound2D("Spawn");
+                            if (destroySelf)
+                            {
+                                Destroy(gameObject, destroySelfAfterTime);
+                                Destroy(portal, destroySelfAfterTime);
+                            }
                         }
                     }
                 }

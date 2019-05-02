@@ -95,9 +95,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerup: 3
-  healthAmount: 0
-  damageAmountMultiplier: 0
+  healthAmount: 25
   shrinkTime: 5
+  damageTime: 0
+  invincibilityTime: 0
   pickedUp: 0
 --- !u!61 &8963022426645104936
 BoxCollider2D:

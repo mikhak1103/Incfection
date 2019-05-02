@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         panning = false;
-        offset = new Vector3(-0.57f, 0f, -0.45f);
+        offset = new Vector3(-0.57f, -2f, -0.45f);
         smoothSpeed = 0.125f;
         panningSmoothSpeed = 0.025f;
     }
@@ -47,7 +47,7 @@ public class CameraController : MonoBehaviour
 
         if (!panning)
         {
-            offset = new Vector3(-0.57f, 0f, -0.45f);
+            offset = new Vector3(-0.57f, 2f, -0.45f);
             Vector3 desiredPosition = player.transform.position + offset;
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
             transform.position = smoothedPosition;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LivingEntity : MonoBehaviour, IDamageable
 {
@@ -21,9 +22,16 @@ public class LivingEntity : MonoBehaviour, IDamageable
     PlatformScript ps;
     public bool boss;
     PlayerScript playerScript;
+    public Slider healthSlider;
 
     public virtual void Start()
     {
+        if (healthSlider != null)
+        {
+            healthSlider.maxValue = startHealth;
+            healthSlider.value = startHealth;
+            healthSlider.gameObject.SetActive(false);
+        }
         renderer = GetComponent<SpriteRenderer>();
         playerScript = GameObject.Find("Player").GetComponent<PlayerScript>();
         if (gameObject.GetComponent<SpriteRenderer>() != null)
@@ -56,8 +64,13 @@ public class LivingEntity : MonoBehaviour, IDamageable
 
     public virtual void TakeHit(float damage, RaycastHit2D hit)
     {
-        health -= damage;
+        if (healthSlider != null)
+        {
+            healthSlider.gameObject.SetActive(true);
+            healthSlider.value = health;
+        }
 
+        health -= damage;
         Flash();
 
         if (health <= 0)
@@ -66,7 +79,25 @@ public class LivingEntity : MonoBehaviour, IDamageable
             DropItem();
             Enable();
         }
+    }
 
+    public virtual void TakeHit(float damage)
+    {
+        if (healthSlider != null)
+        {
+            healthSlider.gameObject.SetActive(true);
+            healthSlider.value = health;
+        }
+
+        health -= damage;
+        Flash();
+
+        if (health <= 0)
+        {
+            Die();
+            DropItem();
+            Enable();
+        }
     }
 
     public void Flash()
@@ -82,13 +113,14 @@ public class LivingEntity : MonoBehaviour, IDamageable
 
     public virtual void Die()
     {
+        AudioManager.instance.PlaySound2D("EnemyDeath");
         dead = true;
         GameObject.Destroy(gameObject);
         GameObject ps = Instantiate(destroyEffect, transform.position, Quaternion.identity) as GameObject;
         Destroy(ps, 2);
         if (boss)
         {
-            
+            playerScript.WinStage();
         }
     }
 
@@ -105,14 +137,14 @@ public class LivingEntity : MonoBehaviour, IDamageable
     {
         int y = Random.Range(0, 100);
         {
-            if (y < itemDropChance)
+            if (y <= itemDropChance)
             {
-                int x = Random.Range(0, 50);
+                int x = Random.Range(0, 100);
                 if (x < 50)
                 {
                     GameObject pu = Instantiate(healthPowerup, transform.position, transform.rotation) as GameObject;
                 }
-                if (y > 50)
+                if (x > 50)
                 {
                     GameObject pu = Instantiate(ammoCrate, transform.position, Quaternion.identity) as GameObject;
                 }

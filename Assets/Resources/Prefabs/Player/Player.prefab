@@ -553,7 +553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2578234916805088468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -145, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2578234916304812801}
@@ -594,15 +594,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 100
-  health: 110
+  health: 100
   healthPowerup: {fileID: 0}
   ammoCrate: {fileID: 0}
   itemDropChance: 0
   whatToActivate: {fileID: 0}
   boss: 0
+  healthSlider: {fileID: 0}
   speed: 3
   jumpVelocity: 7
-  playerPosX: 0
+  playerPosX: -145
   playerPosY: 0
   playerPosZ: 0
   damage: 1
@@ -611,30 +612,31 @@ MonoBehaviour:
   jumpAgain: 0
   running: 0
   shrunk: 0
-  paused: 0
+  berserk: 0
   invincible: 0
+  paused: 0
+  tutorial: 1
   menu: {fileID: 0}
   anim: {fileID: 2578234916805088473}
-  bloodEffect: {fileID: 4035861328060414224, guid: 5e7e318e57869784e8aff58b2f8844c3,
-    type: 3}
-  jumpEffect: {fileID: 3998851557588425479, guid: 53051311277a5d34ca67914fd05e9d83,
-    type: 3}
-  PauseMenu: {fileID: 0}
-  saveTextObject: {fileID: 0}
   extraDamageEffect: {fileID: 0}
   invincibilityDamageEffect: {fileID: 0}
+  timerCanvas: {fileID: 0}
+  timerCanvasText: {fileID: 0}
   effectText: {fileID: 0}
   winPanel: {fileID: 0}
+  portalsToDeactivate: []
+  ingameMainMenu: {fileID: 0}
   jumpEffectPosition: {fileID: 4759440145398961009}
   bloodSources:
   - {fileID: 4759440145406779611}
   - {fileID: 4759440144325209944}
   - {fileID: 4759440144428454558}
   damageEffectPosition: {fileID: 0}
-  autoSaveZones: []
+  tutorialStartPos: {fileID: 0}
   healthText: {fileID: 0}
   currentLevel:
     m_Handle: 0
+  state: 0
 --- !u!114 &2942497133728304036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -668,12 +670,14 @@ MonoBehaviour:
   shotgunImage: {fileID: 21300000, guid: ae6b92fa09d79204eab2d661c6a44496, type: 3}
   actionRifleImage: {fileID: 21300000, guid: 5cc3edc4b4ad76741a068b9b3d587822, type: 3}
   bazookaImage: {fileID: 21300000, guid: e7aa64ee582c3d14e811b3960ddd8011, type: 3}
+  flamethrowerImage: {fileID: 0}
   weaponToEquip: {fileID: 0}
   gunAmmo: 0
   sniperRifleAmmo: 0
   shotgunAmmo: 0
   actionRifleAmmo: 0
   bazookaAmmo: 0
+  flamethrowerAmmo: 0
   damage: 0
 --- !u!95 &2578234916805088473
 Animator:

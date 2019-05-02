@@ -35,15 +35,17 @@ public class PlatformScript : MonoBehaviour
         transform.position = new Vector3(transform.position.x, startPos.y - Mathf.PingPong(Time.time * speed, length), transform.position.z);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player"))
-            collision.transform.SetParent(transform);
+        if (other.gameObject.CompareTag("Player") && isEnabled)
+            other.transform.SetParent(transform);
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player"))
-            collision.transform.SetParent(null);
+        if (other.gameObject.CompareTag("Player") && isEnabled)
+            transform.DetachChildren();
     }
+ 
 }

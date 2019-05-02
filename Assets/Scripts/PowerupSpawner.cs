@@ -7,42 +7,46 @@ public class PowerupSpawner : MonoBehaviour, ISpawnPowerup
     public enum Powerups { Shrink, Damage, Invincibility, Health};
     public Powerups powerup;
     public float healthAmount;
-    public float damageAmountMultiplier;
     public float shrinkTime;
+    public float damageTime;
+    public float invincibilityTime;
     public GameObject[] powerups;
     public bool powerupSpawned;
     public bool powerupPickedUp;
-    [Range(1, 10)]
-    public float spawnTimer = 5;
+    [Range(1, 20)]
+    public float spawnTimer = 10;
     Transform spawnLoc;
 
     void Start()
     {
-        spawnTimer = shrinkTime;
         InvokeRepeating("SpawnPowerup", 0, spawnTimer);
         spawnLoc = transform.GetChild(1);
     }
 
     public void SpawnPowerup()
-    {       switch (powerup)
+    {
+        switch (powerup)
             {
                 case Powerups.Shrink:
                     powerups[0].GetComponent<Powerup>().shrinkTime = shrinkTime;
                     GameObject shrinkPill = Instantiate(powerups[0], spawnLoc.transform.position, Quaternion.identity) as GameObject;
+                spawnTimer = shrinkTime;
                     powerupSpawned = true;
-                Destroy(shrinkPill, spawnTimer);
+                Destroy(shrinkPill, shrinkTime);
                 break;
             case Powerups.Damage:
-                powerups[0].GetComponent<Powerup>().shrinkTime = shrinkTime;
+                powerups[1].GetComponent<Powerup>().damageTime = damageTime;
                 GameObject damagePill = Instantiate(powerups[1], spawnLoc.transform.position, Quaternion.identity) as GameObject;
                 powerupSpawned = true;
-                Destroy(damagePill, spawnTimer);
+                spawnTimer = damageTime;
+                Destroy(damagePill, damageTime);
                 break;
             case Powerups.Invincibility:
-                powerups[0].GetComponent<Powerup>().shrinkTime = shrinkTime;
+                powerups[2].GetComponent<Powerup>().invincibilityTime = invincibilityTime;
                 GameObject invincibilityPill = Instantiate(powerups[2], spawnLoc.transform.position, Quaternion.identity) as GameObject;
                 powerupSpawned = true;
-                Destroy(invincibilityPill, spawnTimer);
+                spawnTimer = invincibilityTime;
+                Destroy(invincibilityPill, invincibilityTime);
                 break;
         }        
     }    

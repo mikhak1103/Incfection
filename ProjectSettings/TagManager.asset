@@ -16,6 +16,8 @@ TagManager:
   - AmmoBox
   - Fire
   - BossBullet
+  - BacteriaWaterfallDeathZone
+  - BossMusicTrigger
   layers:
   - Default
   - TransparentFX

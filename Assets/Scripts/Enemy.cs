@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Enemy : LivingEntity
 {
-    public enum State { Idle, Chasing, Attacking, Patroling};
+    public enum State { Idle, Chasing, Attacking, Patroling };
     public State currentState;
 
     Transform target;
@@ -43,9 +43,9 @@ public class Enemy : LivingEntity
 
     [Header("Motions")]
     public bool rotate;
-    [Range(1, 10)]
+    [Range(0.1f, 10)]
     public float rotateSpeed;
-    [Range(1, 10)]
+    [Range(0.1f, 10)]
     public float radius = 4f;
     private Vector2 _centre;
     private float _angle;
@@ -58,43 +58,40 @@ public class Enemy : LivingEntity
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         target = GameObject.FindGameObjectWithTag("Player").transform;
         _centre = transform.position;
-        rotateSpeed = 2f;
-        radius = 4f;
         nextShotTime = 1;
         timeBetweenShots = 0.8f;
-        engageCombatDistance = 17f;
-}
+    }
 
     private void Update()
     {
-            if (Vector2.Distance(transform.position, target.position) < engageCombatDistance)
-            {
-                currentState = State.Attacking;
-            }
+        if (Vector2.Distance(transform.position, target.position) < engageCombatDistance)
+        {
+            currentState = State.Attacking;
+        }
 
-            if (Vector2.Distance(transform.position, target.position) > engageCombatDistance)
-            {
-                currentState = State.Idle;
-            }
+        if (Vector2.Distance(transform.position, target.position) > engageCombatDistance)
+        {
+            currentState = State.Patroling;
+        }
 
-            if (currentState == State.Patroling)
-            {
-                Patrol();
-            }
-            if (currentState == State.Attacking)
-            {
-                Attack();
-            }
-            if (currentState == State.Chasing)
-            {
-                Chase();
-            }
+        if (currentState == State.Patroling)
+        {
+            Patrol();
+        }
+        if (currentState == State.Attacking)
+        {
+            Attack();
+        }
+        if (currentState == State.Chasing)
+        {
+            Chase();
+        }
 
-            if (rotate)
-            {
-                Rotate();
-            }
-        
+        if (rotate)
+        {
+            Rotate();
+        }
+
     }
 
     public void Idle()
@@ -108,7 +105,7 @@ public class Enemy : LivingEntity
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 0.5f, layerMask);
         if (groundInfo.collider == false)
         {
-            if(movingRight)
+            if (movingRight)
             {
                 transform.eulerAngles = new Vector3(0, -180, 0);
                 movingRight = false;
@@ -143,16 +140,12 @@ public class Enemy : LivingEntity
 
     public void Attack()
     {
-        if (boss)
+        if (Time.time > nextShotTime)
         {
-            if (Time.time > nextShotTime)
-            {
-                GameObject bossBullet = Instantiate(bullet, firePoint.transform.position, Quaternion.identity);
-                nextShotTime = Time.time + timeBetweenShots;
-            }
-            
+            AudioManager.instance.PlaySound2D("EnemyShoot");
+            GameObject bossBullet = Instantiate(bullet, firePoint.transform.position, Quaternion.identity);
+            nextShotTime = Time.time + timeBetweenShots;
         }
-
     }
 
     public void Rotate()
@@ -165,7 +158,7 @@ public class Enemy : LivingEntity
 
     public void Chase()
     {
-        
+
     }
 
     void ScaleUpAndDown(Transform t)

@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5944458572284457822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5944458572284457808}
+  - component: {fileID: 5944458572284457809}
+  - component: {fileID: 5944458573739316365}
+  - component: {fileID: 1024187774460273494}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5944458572284457808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944458572284457822}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 144.50531, y: 3.8286438, z: -11.19574}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5944458572367179118}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5944458572284457809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944458572284457822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dcac5eb0e694e04f9908e786d1cf4ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5944458573739316365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944458572284457822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1f1edfad0d5814fbaff05e403fd166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainTheme: {fileID: 8300000, guid: 5c39c72c17ea4d24689dc614dd4b0747, type: 3}
+  menuTheme: {fileID: 8300000, guid: f476379abd19e554c88d38cb6f8afbc2, type: 3}
+  bossTheme: {fileID: 8300000, guid: 0d6a761a9912f98488a522399eb6583d, type: 3}
+--- !u!114 &1024187774460273494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944458572284457822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f73e45882bbd24289d606dfa6e50fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundGroups:
+  - groupID: FlameThrower
+    group:
+    - {fileID: 8300000, guid: 49dd3a24f043c5d4d9868f7b53a234fd, type: 3}
+  - groupID: Jump
+    group:
+    - {fileID: 8300000, guid: af49acd8623cab64a957107d73464c7e, type: 3}
+  - groupID: Spawn
+    group:
+    - {fileID: 8300000, guid: 59d5e64d88d47f74bbd871a2db955cee, type: 3}
+  - groupID: PowerUp
+    group:
+    - {fileID: 8300000, guid: 24f426de12d2a654783d3a884b8a1ace, type: 3}
+  - groupID: EnemyDeath
+    group:
+    - {fileID: 8300000, guid: de9a55d1fd1a2be44bd3088d17d9bf4b, type: 3}
+  - groupID: PowerDown
+    group:
+    - {fileID: 8300000, guid: 902e457495eea9d4a8a30328a521ad04, type: 3}
+  - groupID: Shotgun
+    group:
+    - {fileID: 8300000, guid: 3db3213803ffa1340939ad8a0d4af2a4, type: 3}
+  - groupID: ActionRifle
+    group:
+    - {fileID: 8300000, guid: b1296b0e86560b74487491f08da7f71a, type: 3}
+  - groupID: Pistol
+    group:
+    - {fileID: 8300000, guid: ae482c6cef3b0d14cb140f32c6f19af5, type: 3}
+  - groupID: Land
+    group:
+    - {fileID: 8300000, guid: 76f2b042559f217479cab43000b187e7, type: 3}
+--- !u!1 &5944458572367179119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5944458572367179118}
+  - component: {fileID: 8792672801999204359}
+  m_Layer: 0
+  m_Name: Audio Listener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5944458572367179118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944458572367179119}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5944458572284457808}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &8792672801999204359
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944458572367179119}
+  m_Enabled: 1

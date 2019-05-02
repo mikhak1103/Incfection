@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4479997134191696278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.808, y: -3.602, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 0}
   m_Children:
   - {fileID: 4479997134689604794}
   m_Father: {fileID: 0}
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: -2022866057
   m_SortingLayer: 1
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: e7aa64ee582c3d14e811b3960ddd8011, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 323c412a079f4f04ab4dda640df65a3c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
     type: 3}
   mediumDestroyEffect: {fileID: 4427314887556110387, guid: 1dadf645972aac3419037f0336ddef20,
     type: 3}
+  flames: {fileID: 0}
   projectileSpawn:
   - {fileID: 4479997134689604794}
   projectile: {fileID: 5975099420591145938, guid: 47fad4cf6236c564c81b6ce206e88056,

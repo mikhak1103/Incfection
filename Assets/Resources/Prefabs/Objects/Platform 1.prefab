@@ -124,7 +124,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.39, y: 0.6179572}
+  m_Size: {x: 3.54, y: 0.73}
   m_EdgeRadius: 0
 --- !u!61 &6798270570363804740
 BoxCollider2D:
@@ -139,7 +139,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01999998, y: 0.16777205}
+  m_Offset: {x: 0.01999998, y: 0.62}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -150,7 +150,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.36, y: 1.3755441}
+  m_Size: {x: 3.82, y: 0.93}
   m_EdgeRadius: 0
 --- !u!1 &8025966448036450741
 GameObject:
@@ -180,7 +180,7 @@ Transform:
   m_LocalPosition: {x: 0.34, y: 0.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6710944286842357440}
+  - {fileID: 7814591702608373776}
   m_Father: {fileID: 2758222333009881300}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -231,6 +231,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550201500607460697, guid: e5890b85529f514449880b96f0ab2219,
+        type: 3}
+      propertyPath: m_TagString
+      value: Fire
       objectReference: {fileID: 0}
     - target: {fileID: 3553640847490871091, guid: e5890b85529f514449880b96f0ab2219,
         type: 3}
@@ -307,6 +312,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3549995404983477959, guid: e5890b85529f514449880b96f0ab2219,
+        type: 3}
+      propertyPath: m_TagString
+      value: Fire
+      objectReference: {fileID: 0}
     - target: {fileID: 3550386823407475471, guid: e5890b85529f514449880b96f0ab2219,
         type: 3}
       propertyPath: m_Layer
@@ -316,6 +326,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550386823407475471, guid: e5890b85529f514449880b96f0ab2219,
+        type: 3}
+      propertyPath: m_TagString
+      value: Fire
       objectReference: {fileID: 0}
     - target: {fileID: 3712082820082401597, guid: e5890b85529f514449880b96f0ab2219,
         type: 3}
@@ -379,7 +394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5890b85529f514449880b96f0ab2219, type: 3}
---- !u!4 &6710944286842357440 stripped
+--- !u!4 &7814591702608373776 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3553640847490871091, guid: e5890b85529f514449880b96f0ab2219,
     type: 3}

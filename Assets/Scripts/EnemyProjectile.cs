@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyProjectile : MonoBehaviour
 {
     public float speed = 10f;
-    public float lifeTime = 3f;
+    public float lifeTime = 5f;
     public float distance = 0.1f;
     public int damage = 10;
     public float projectileSpeed = 10;
@@ -22,13 +22,8 @@ public class EnemyProjectile : MonoBehaviour
         Invoke("DestroyProjectile", lifeTime);
         moveDirection = (player.transform.position - transform.position);
         moveDirection.z = 0;
-        //moveDirection.Normalize();
 
         ps = player.GetComponent<PlayerScript>();
-
-        //Collider2D enemyCollider = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Collider2D>();
-
-        //Physics2D.IgnoreCollision(transform.GetComponent<Collider2D>(), enemyCollider);
     }
 
     // Update is called once per frame
@@ -39,11 +34,9 @@ public class EnemyProjectile : MonoBehaviour
         {
             if (hit.collider.CompareTag("Player"))
             {
-
                 OnHitObject(hit);
-            }
-
-            DestroyProjectile();
+                DestroyProjectile();
+            }           
         }
 
         transform.position = transform.position + moveDirection * speed * Time.deltaTime;
@@ -54,7 +47,7 @@ public class EnemyProjectile : MonoBehaviour
         ITakeDamage damageAbleObject = hit.collider.GetComponent<ITakeDamage>();
         if (damageAbleObject != null)
         {
-            damageAbleObject.PlayerTakeHit(damage, player.transform);
+            damageAbleObject.PlayerTakeHit(damage);
         }
         Destroy(gameObject);
     }

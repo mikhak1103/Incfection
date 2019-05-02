@@ -97,7 +97,7 @@ MonoBehaviour:
   lifeTime: 2
   toHit:
     serializedVersion: 2
-    m_Bits: 7173
+    m_Bits: 5124
   distance: 0.001
   destroyEffect: {fileID: 4427314887556110387, guid: a1b5d1d4046ed8c4380cd4551f0df9b6,
     type: 3}

@@ -3,11 +3,12 @@
 public interface IDamageable
 {
     void TakeHit(float damage, RaycastHit2D hit);
+    void TakeHit(float damage);
 }
 
 public interface ITakeDamage
 {
-    void PlayerTakeHit(float damage, Transform target);
+    void PlayerTakeHit(float damage);
 }
 
 public interface IPowerUp
