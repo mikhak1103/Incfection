@@ -19,7 +19,7 @@ public class Menu : MonoBehaviour
     public bool newGame;
     public AudioClip menuTheme;
     public Toggle fullscreenToggle;
-    public GameObject prologueMenu;
+    GameObject prologueMenu;
 
     void Start()
     {
@@ -36,6 +36,7 @@ public class Menu : MonoBehaviour
         }
 
         fullscreenToggle.isOn = isFullscreen;
+
     }
 
     public void NewGame()

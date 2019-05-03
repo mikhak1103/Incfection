@@ -16,7 +16,6 @@ public class Enemy : LivingEntity
     public float moveDistance = 10;
     public bool leftToRight;
 
-    float timeBetweenAttacks = 1;
     public float patrolSpeed = 2;
     public bool movingRight;
     public LayerMask layerMask;

@@ -24,7 +24,5 @@ public class Lavabug : MonoBehaviour
             sr.flipY = true;
         if (timer % 10 == 0)
             sr.flipY = false;
-
-        Debug.Log(timer);
     }
 }

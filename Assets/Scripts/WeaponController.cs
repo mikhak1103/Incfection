@@ -19,8 +19,6 @@ public class WeaponController : MonoBehaviour
     [Range(1, 100)]
     public int projectileSpeed = 30;
 
-    int i = 0;
-
     Weapon ws; //weapon script
 
     public Image weaponImage;

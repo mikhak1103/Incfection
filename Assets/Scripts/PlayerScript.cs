@@ -231,11 +231,13 @@ public class PlayerScript : LivingEntity, ITakeDamage
         if (pausedMainMenu)
         {
             ingameMainMenu.SetActive(true);
+            Cursor.visible = true;
             Time.timeScale = 0;
         }
         else if (!pausedMainMenu)
         {
             ingameMainMenu.SetActive(false);
+            Cursor.visible = false;
             Time.timeScale = 1;
         }
 
@@ -261,8 +263,6 @@ public class PlayerScript : LivingEntity, ITakeDamage
                 anim.Play("Death");   StartCoroutine("DeathTimer"); 
                 break;
         }
-
-        Debug.Log(state);
         // Animation setters
 
         anim.SetFloat("speed", Mathf.Abs(xInput));
@@ -374,6 +374,7 @@ public class PlayerScript : LivingEntity, ITakeDamage
         //health = PlayerPrefs.GetFloat("health");
         transform.position = new Vector3(playerPosX, playerPosY, playerPosZ);
         state = State.Idle;
+        
         //SceneManager.LoadScene(PlayerPrefs.GetInt("CurrentLevel"));
     }
 
